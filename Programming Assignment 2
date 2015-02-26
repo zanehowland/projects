@@ -1,0 +1,64 @@
+var parentWin = Titanium.UI.createWindow({
+	
+	title: 'firstwindow',
+	
+	backgroundColor: '#DC143C'
+	
+});
+
+
+parentWin.open();
+
+ 
+// Create a Button.
+var aButton = Ti.UI.createButton({
+	title : 'Page 2', 
+	top : 375,
+	left : 10
+});
+
+// Listen for click events.
+aButton.addEventListener('click', function() {
+	window2.open();
+});
+
+// Add to the parent view.
+parentWin.add(aButton);
+
+var window2 = Titanium.UI.createWindow ({
+	title: 'secondwindow',
+	backgroundColor: '#4682B4'
+	
+});
+
+
+
+
+// Create a Button.
+var aButton2 = Ti.UI.createButton({
+	title : 'Page 1',
+	top : 375,
+	left : 10
+});
+
+// Listen for click events.
+aButton2.addEventListener('click', function() {
+	window2.close();
+});
+
+// Add to the parent view.
+window2.add(aButton2);
+
+
+var switchOrientation = Ti.UI.createButton({title: 'Make Landscape'});
+switchOrientation.addEventListener('click', rotatelayout);
+
+var layout = Ti.UI.createView ({layout: 'vertical'});
+layout.add(switchOrientation);
+
+function rotatelayout () {
+	parentWin.orientationModes = [Ti.UI.LANDSCAPE_LEFT];
+	switchOrientation.hide();
+}
+
+parentWin.add(switchOrientation);
