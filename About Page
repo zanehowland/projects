@@ -1,0 +1,64 @@
+var win = Ti.UI.createWindow({
+  backgroundColor:'white'
+});
+
+var scrollView = Ti.UI.createScrollView({
+  bottom:120,
+  contentHeight: 'auto',
+  layout: 'vertical'
+});
+
+win.add(scrollView);
+
+
+var label1 = Titanium.UI.createLabel({
+	color:'Black',
+	text:'About Us\n_\nThe Study Abroad Staff at the University of Idaho are here to help students, faculty, and staff travel abroad for study, internships, research, volunteer work, or teaching and to help enhance global learning on campus. In this section, you’ll find more information about our team and study abroad statistics.',
+	textAlign:'left',
+	top: 20,
+	width:'auto'
+});
+
+scrollView.add(label1);
+
+var label2 = Titanium.UI.createLabel({
+	color:'Black',
+	text:'Step 1: Pre-Application\n_\nDetermine the one program that fits your needs the best, and apply to that program. UI Study 	Abroad staff can help you at any time along the way!',
+	textAlign:'left',
+	top: 30,
+	width:'auto'
+});
+
+scrollView.add(label2);
+
+var label3 = Titanium.UI.createLabel({
+	color:'Black',
+	text:'Step 2: Apply\n_\nChoose the type of international experience you wish to complete. Fill out the appropriate 	forms and follow the directions on the Apply link at http://www.uidaho.edu/international/study-abroad/steps-to-studying-abroad/step-2-apply!',
+	textAlign:'left',
+	top: 40,
+	width:'auto'
+});
+
+scrollView.add(label3);
+
+var label4 = Titanium.UI.createLabel({
+	color:'Black',
+	text: 'Step 3: Post-Application\n_\nOnce you have applied to study abroad, you will have a personal Studio Abroad account where 	you will find post-application forms and requirements specific to you and your program. ',
+	textAlign:'left',
+	top: 50,
+	width:'auto'
+});
+
+scrollView.add(label4);
+
+var label5 = Titanium.UI.createLabel({
+	color:'Black',
+	text: 'Step 4: While Abroad\n_\nEnjoy your life changing experience with Study Abroad! Immerse yourself in your host country’s 	unique culture! For further information and tips while abroad, visit the University of Idaho’s  	website!',
+	textAlign:'left',
+	top: 60,
+	width:'auto'
+});
+
+scrollView.add(label5);
+
+win.open();
